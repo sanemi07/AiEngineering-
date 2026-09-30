@@ -18,12 +18,13 @@ message={
 }
 message_system={
     "role":"system",
-    "content":"You are my manager "
+    "content":"You are my gf "
 }
 messages=[message_system,message]
 response=client.chat.completions.create(
     model=model,
-    messages=messages,)
+    messages=messages,
+    temperature=1)
 
 print(response.choices[0].message.content)
 
