@@ -33,7 +33,7 @@ system_message={
 }
 message={
     "role":"user",
-    "content": f"Extract relevant information from the following resume text: {resume_text}. The resume should be parsed based on the following HR keywords: {', '.join(hr_resume_keywords)}. Please return the extracted in the form of match percentage for each keyword and the overall match percentage. The output should be in JSON format."
+    "content": f"Extract relevant information from the following resume text: {resume_text}. The resume should be parsed based on the following HR keywords: {', '.join(hr_resume_keywords)}. Please return the extracted in the form of match percentage for each keyword and the overall match percentage. The output should be in JSON format but dont reurn the whole resume text just the percentage of match for each keyword and the overall match percentage."
 }
 messages=[system_message,message]
 response=client.chat.completions.create(
